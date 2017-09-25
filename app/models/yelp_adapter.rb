@@ -34,7 +34,7 @@ class YelpAdapter
     details = {}
     location = hash[:location]
     details[:name] = hash[:name]
-    details[:address] = location["display_address"].join(",")
+    details[:address] = location["display_address"].join(", ")
     details[:phone] = hash[:phone]
     details
   end

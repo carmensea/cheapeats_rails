@@ -1,16 +1,25 @@
-<% if @rests %>
-  <div class="container">
-    <h2>
-      Not your jawn?
-      <small class="text-muted">Try another search</small></h2>
+<div class="container">
+  <div class="row justify-content-md-center">
+    <h2> Not your jawn?</h2>
   </div>
+    <%= render '/searches/form' %>
+  <div class="row justify-content-md-center">
+    <h4 class="text-muted">Try another search</h4>
+  </div>
+</div>
+
+<% if @rests %>
   <% @rests.each do |place| %>
     <div class="container">
-    <blockquote class="blockquote text-center">
-      <%= place.name %>
-      <address><%= place.address %></address>
-      <%= place.phone %>
-    </blockquote>
+      <blockquote class="blockquote text-center">
+        <h4><%= place.name %></h4>
+        <div>
+          <%= place.address %>
+        </div>
+        <div>
+          <%= place.phone %>
+        </div>
+      </blockquote>
     </div>
   <% end %>
 <% end %>
