@@ -1,0 +1,8 @@
+- add background image
+- add users
+- add favorites
+- create association for users to have favorite restaurants
+
+stretch:
+- add reviews
+- maybe add functionality add food
