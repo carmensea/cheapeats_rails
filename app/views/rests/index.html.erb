@@ -1,0 +1,17 @@
+<% if @rests %>
+  <div class="container">
+    <h2>
+      Not your jawn?
+      <small class="text-muted">Try another search</small></h2>
+  </div>
+  <% @rests.each do |place| %>
+    <div class="container">
+    <blockquote class="blockquote text-center">
+      <%= place.name %>
+      <address><%= place.address %></address>
+      <%= place.phone %>
+    </blockquote>
+    </div>
+  <% end %>
+<% end %>
+

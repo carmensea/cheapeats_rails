@@ -1,0 +1,7 @@
+<div class="search">
+  <%= form_tag '/rests', method: :get   do  %>
+    Food<%= text_field_tag :term %>
+    Location<%= text_field_tag :location  %>
+    <%= submit_tag "Search" %>
+  <% end %>
+</div>
