@@ -14,8 +14,8 @@ services:
   app:
     build: .
     env_file: .env
-    volumes:
-      - .:/usr/src/app
+    environment:
+      RAILS_ENV: production
     ports:
       - "3000:3000"
     depends_on:
