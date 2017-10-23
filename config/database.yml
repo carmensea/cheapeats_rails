@@ -1,9 +1,9 @@
 default: &default
   adapter: postgresql
-  host: <%= ENV["POSTGRES_HOST"] %>
+  encoding: unicode
+  host: db
   username: <%= ENV["POSTGRES_USER"] %>
   password: <%= ENV["POSTGRES_PASSWORD"] %>
-  encoding: utf8
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
   timeout: 5000
 
@@ -20,4 +20,5 @@ test:
 
 production:
   <<: *default
+  host: <%= ENV["POSTGRES_HOST"] %>
   database: cheapeats_production
